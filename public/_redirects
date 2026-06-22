@@ -1,0 +1,11 @@
+####################
+# CHATBOT FRONTEND #
+####################
+# Public chatbot widget page — embeddable / standalone
+/        /index.html  200
+
+###################
+# DASHBOARD / ADMIN
+###################
+# All Angular routes fall back to index.html
+/*       /index.html  200
