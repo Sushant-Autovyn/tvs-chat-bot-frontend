@@ -128,16 +128,30 @@ export class ChatbotComponent implements OnInit {
           this.fallbackCount = 0;
         }
 
-        // If this triggers the form, just show the form silently —
-        // no extra prompt message (the form itself is the prompt).
+        // If this triggers the form, first show a polished hand-off
+        // message, then reveal the ticket intake form after a short delay.
         if (isFallback && this.fallbackCount >= 1 && !this.showForm) {
-          this.showForm = true;
+          this.addBotMessage(
+            'Thank you for reaching out. This query requires attention from our specialist team. To raise a support ticket, please share the details below — a representative will get in touch with you shortly.'
+          );
+          this.cdr.detectChanges();
+          this.scrollToBottom();
+
+          this.isTyping = true;
+          this.cdr.detectChanges();
+          this.scrollToBottom();
+
+          setTimeout(() => {
+            this.isTyping = false;
+            this.showForm = true;
+            this.cdr.detectChanges();
+            this.scrollToBottom();
+          }, 1200);
         } else {
           this.addBotMessage(res.reply, res.quickReplies);
+          this.cdr.detectChanges();
+          this.scrollToBottom();
         }
-
-        this.cdr.detectChanges();
-        this.scrollToBottom();
       },
       error: () => {
         this.isTyping = false;
