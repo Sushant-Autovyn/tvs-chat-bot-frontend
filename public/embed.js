@@ -37,7 +37,7 @@
     'color-scheme:normal;transition:width .25s ease,height .25s ease;';
 
   var OPEN_STYLE =
-    'position:fixed;bottom:0;right:0;width:430px;height:740px;' +
+    'position:fixed;bottom:0;right:0;width:460px;height:780px;' +
     'max-width:100vw;max-height:100vh;' +
     'border:0;background:transparent;z-index:2147483647;' +
     'color-scheme:normal;transition:width .25s ease,height .25s ease;';
