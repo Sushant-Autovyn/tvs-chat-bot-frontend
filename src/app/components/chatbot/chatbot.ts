@@ -40,7 +40,7 @@ export class ChatbotComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.addBotMessage('Hi! I am the TVS support bot. How can I help you today?');
+    this.addBotMessage('Welcome to TVS Support. I\'m your virtual assistant and I\'m here to help with your queries. How may I assist you today?');
   }
 
   toggleChat() {

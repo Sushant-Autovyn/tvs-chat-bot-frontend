@@ -1,6 +1,6 @@
 <!-- Floating Button -->
 <button class="chat-toggle-btn" (click)="toggleChat()" [class.open]="isOpen">
-  <span class="btn-icon">{{ isOpen ? '✕' : '💬' }}</span>
+  <span class="btn-icon" *ngIf="!isOpen">💬</span>
   <span class="btn-label" *ngIf="!isOpen">Support</span>
 </button>
 
