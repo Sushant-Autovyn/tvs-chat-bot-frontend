@@ -1,7 +1,7 @@
 <!-- Floating Button -->
-<button class="chat-toggle-btn" (click)="toggleChat()" [class.open]="isOpen">
-  <span class="btn-icon" *ngIf="!isOpen">💬</span>
-  <span class="btn-label" *ngIf="!isOpen">Support</span>
+<button class="chat-toggle-btn" (click)="toggleChat()" *ngIf="!isOpen">
+  <span class="btn-icon">💬</span>
+  <span class="btn-label">Support</span>
 </button>
 
 <!-- Chat Window -->
