@@ -48,6 +48,15 @@ export class ChatbotComponent implements OnInit {
     if (this.isOpen) {
       this.scrollToBottom();
     }
+    this.notifyParent(this.isOpen ? 'open' : 'closed');
+  }
+
+  private notifyParent(state: 'open' | 'closed') {
+    try {
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage({ source: 'tvs-chatbot', state }, '*');
+      }
+    } catch (e) {}
   }
 
   validateForm(): boolean {

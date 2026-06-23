@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TVS Chatbot — Embed Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f3f4f6;
+      color: #1f2937;
+      min-height: 100vh;
+    }
+    header {
+      background: #003087;
+      color: #fff;
+      padding: 18px 28px;
+    }
+    header h1 { margin: 0; font-size: 18px; font-weight: 600; }
+    main {
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
+    h2 { color: #003087; }
+    code, pre {
+      background: #0f172a;
+      color: #f1f5f9;
+      border-radius: 8px;
+      padding: 2px 6px;
+      font-family: 'Fira Code', Menlo, Consolas, monospace;
+      font-size: 13.5px;
+    }
+    pre {
+      padding: 14px 16px;
+      overflow-x: auto;
+      line-height: 1.55;
+    }
+    p { line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <header><h1>TVS Chatbot — Embed Demo</h1></header>
+  <main>
+    <h2>How to embed</h2>
+    <p>Add a single line to the bottom of your page (just before <code>&lt;/body&gt;</code>):</p>
+<pre>&lt;script src="https://tvs-chat-bot-frontend.vercel.app/embed.js" defer&gt;&lt;/script&gt;</pre>
+    <p>That's it. The floating Support button will appear in the bottom-right corner. Clicking it opens the chat window; the iframe automatically resizes to fit.</p>
+    <h2>Notes</h2>
+    <ul>
+      <li>Renders inside a sandboxed iframe — zero CSS or JS conflicts with the host page.</li>
+      <li>Safe to include on multiple pages; the loader guards against double-injection.</li>
+      <li>Works on mobile — the chat window clamps to the viewport size.</li>
+    </ul>
+  </main>
+
+  <!-- The widget -->
+  <script src="./embed.js" defer></script>
+</body>
+</html>
