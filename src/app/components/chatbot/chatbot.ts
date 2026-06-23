@@ -141,7 +141,7 @@ export class ChatbotComponent implements OnInit {
         // message, then reveal the ticket intake form after a short delay.
         if (isFallback && this.fallbackCount >= 1 && !this.showForm) {
           this.addBotMessage(
-            'Thank you for reaching out. This query requires attention from our specialist team. To raise a support ticket, please share the details below — a representative will get in touch with you shortly.'
+            'Connecting you with our support team. Please share the details below to raise a ticket.'
           );
           this.cdr.detectChanges();
           this.scrollToBottom();
