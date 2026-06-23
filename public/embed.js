@@ -32,7 +32,7 @@
   // Closed: just enough room to show the floating button.
   // Open:   fits the full chat window (380px wide × 600px tall + margins).
   var CLOSED_STYLE =
-    'position:fixed;bottom:0;right:0;width:170px;height:96px;' +
+    'position:fixed;bottom:0;right:0;width:120px;height:120px;' +
     'border:0;background:transparent;z-index:2147483647;' +
     'color-scheme:normal;transition:width .25s ease,height .25s ease;';
 

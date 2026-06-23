@@ -8,41 +8,86 @@
   position: fixed;
   bottom: 28px;
   right: 28px;
-  background: #003087;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  background: linear-gradient(135deg, #003087 0%, #0046c7 100%);
   color: #ffffff;
   border: none;
-  border-radius: 999px;
-  padding: 13px 20px 13px 16px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
   cursor: pointer;
-  box-shadow: 0 10px 24px -8px rgba(0, 48, 135, 0.45), 0 2px 6px rgba(15, 23, 42, 0.08);
+  box-shadow:
+    0 12px 28px -10px rgba(0, 48, 135, 0.55),
+    0 4px 10px rgba(15, 23, 42, 0.10),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
   z-index: 1000;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   font-family: 'Inter', 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
+}
+
+.chat-toggle-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.22), transparent 55%);
+  pointer-events: none;
 }
 
 .chat-toggle-btn:hover {
-  transform: translateY(-2px);
-  background: #002266;
-  box-shadow: 0 14px 28px -8px rgba(0, 48, 135, 0.55), 0 2px 6px rgba(15, 23, 42, 0.1);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 16px 32px -10px rgba(0, 48, 135, 0.6),
+    0 6px 14px rgba(15, 23, 42, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
-.chat-toggle-btn.open {
-  border-radius: 50%;
-  padding: 14px;
-  background: #1e293b;
-  box-shadow: 0 8px 18px -6px rgba(15, 23, 42, 0.4);
+.chat-toggle-btn:active {
+  transform: translateY(0) scale(0.98);
 }
 
-.btn-icon {
-  font-size: 18px;
-  line-height: 1;
+.chat-toggle-btn:focus-visible {
+  outline: none;
+  box-shadow:
+    0 12px 28px -10px rgba(0, 48, 135, 0.55),
+    0 0 0 4px rgba(0, 48, 135, 0.25);
+}
+
+.toggle-icon {
+  position: relative;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.toggle-status-dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+.toggle-status-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.45);
+  animation: tvs-pulse 1.8s ease-out infinite;
+  z-index: -1;
+}
+
+@keyframes tvs-pulse {
+  0%   { transform: scale(0.8); opacity: 0.8; }
+  100% { transform: scale(2.2); opacity: 0;   }
 }
 
 /* ── Chat Window ── */
