@@ -93,11 +93,11 @@
 /* ── Chat Window ── */
 .chat-window {
   position: fixed;
-  bottom: 96px;
+  bottom: 24px;
   right: 28px;
   width: 380px;
   height: 600px;
-  max-height: calc(100vh - 130px);
+  max-height: calc(100vh - 48px);
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 24px 48px -16px rgba(15, 23, 42, 0.25), 0 4px 12px rgba(15, 23, 42, 0.06);
