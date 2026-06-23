@@ -7,7 +7,7 @@
 .chat-toggle-btn {
   position: fixed;
   bottom: 28px;
-  right: 28px;
+  left:14px;
   height: 52px;
   padding: 0 22px 0 18px;
   display: inline-flex;
@@ -81,7 +81,7 @@
 .chat-window {
   position: fixed;
   bottom: 24px;
-  right: 28px;
+  left:14px;
   width: 380px;
   height: 600px;
   max-height: calc(100vh - 48px);
